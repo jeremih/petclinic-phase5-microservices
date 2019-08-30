@@ -1,6 +1,6 @@
 package com.example.petclinic;
 
-import com.example.petclinic.business.PetClinicBuisnessWorkflow;
+import com.example.petclinic.business.PetClinicBusinessWorkflow;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -12,7 +12,7 @@ public class PetClinicClient {
 
         ApplicationContext context = SpringApplication.run(PetClinicClient.class, args);
 
-        PetClinicBuisnessWorkflow business = (PetClinicBuisnessWorkflow) context.getBean("petClinicBuisnessWorkflow");
+        PetClinicBusinessWorkflow business = (PetClinicBusinessWorkflow) context.getBean("petClinicBusinessWorkflow");
 
         business.runBusiness();
 
